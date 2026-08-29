@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Liquid Chat</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- LIQUID ARKA PLAN -->
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+    <div class="background-glow glow-three"></div>
+
+
+    <!-- ANA UYGULAMA -->
+
+    <div class="app">
+
+
+        <!-- =====================================
+             SOL PANEL
+        ====================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- ÜST BAR -->
+
+            <div class="sidebar-top">
+
+                <div class="brand">
+
+                    <div class="brand-icon">
+                        ◉
+                    </div>
+
+                    <span>
+                        Chat
+                    </span>
+
+                </div>
+
+
+                <button
+                    id="newPersonBtn"
+                    class="icon-button"
+                    title="Yeni Kişi"
+                >
+                    +
+                </button>
+
+            </div>
+
+
+            <!-- ARAMA -->
+
+            <div class="search-box">
+
+                <span class="search-icon">
+                    ⌕
+                </span>
+
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Ara"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- BAŞLIK -->
+
+            <div class="section-title">
+                Sohbetler
+            </div>
+
+
+            <!-- KİŞİLER -->
+
+            <div
+                id="contactList"
+                class="contact-list"
+            ></div>
+
+
+            <!-- KİŞİ YOK -->
+
+            <div
+                id="emptyContacts"
+                class="empty-contacts"
+            >
+
+                <div class="empty-icon">
+                    +
+                </div>
+
+                <h3>
+                    Henüz kişi yok
+                </h3>
+
+                <p>
+                    Yeni bir kişi ekleyerek
+                    sohbete başlayabilirsin.
+                </p>
+
+                <button
+                    id="emptyAddBtn"
+                    class="glass-button"
+                >
+                    Yeni Kişi
+                </button>
+
+            </div>
+
+
+            <!-- ALT PANEL -->
+
+            <div class="sidebar-bottom">
+
+
+                <!-- PROFİL -->
+
+                <button
+                    id="profileButton"
+                    class="profile-card"
+                >
+
+                    <div
+                        id="profileAvatar"
+                        class="profile-avatar"
+                    >
+                        ?
+                    </div>
+
+
+                    <div class="profile-card-info">
+
+                        <strong id="profileName">
+                            Profil oluştur
+                        </strong>
+
+                        <span>
+                            Profilim
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-arrow">
+                        ›
+                    </div>
+
+                </button>
+
+
+                <!-- SES -->
+
+                <button
+                    id="soundButton"
+                    class="bottom-button"
+                >
+
+                    <span id="soundIcon">
+                        🔊
+                    </span>
+
+                    <span id="soundText">
+                        Ses Açık
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =====================================
+             SAĞ CHAT
+        ====================================== -->
+
+        <main class="chat">
+
+
+            <!-- CHAT HEADER -->
+
+            <header
+                id="chatHeader"
+                class="chat-header hidden"
+            >
+
+                <div class="person-info">
+
+                    <div
+                        id="headerAvatar"
+                        class="avatar"
+                    >
+                        ?
+                    </div>
+
+
+                    <div>
+
+                        <div
+                            id="headerName"
+                            class="person-name"
+                        >
+                            Kişi
+                        </div>
+
+
+                        <div class="status">
+
+                            <span class="status-dot"></span>
+
+                            Sohbette
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="chat-actions">
+
+                    <button
+                        class="header-button"
+                        id="searchChatButton"
+                        title="Ara"
+                    >
+                        ⌕
+                    </button>
+
+                    <button
+                        class="header-button"
+                        id="chatMenuButton"
+                        title="Menü"
+                    >
+                        ⋯
+                    </button>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- WELCOME -->
+
+            <section
+                id="welcomeScreen"
+                class="welcome"
+            >
+
+                <div class="welcome-glass">
+
+                    <div class="welcome-logo">
+                        ◉
+                    </div>
+
+                    <h1>
+                        Mesajlaşmaya başla
+                    </h1>
+
+                    <p>
+                        Soldan bir kişi seç veya
+                        yeni bir kişi ekle.
+                    </p>
+
+                    <button
+                        id="welcomeAddBtn"
+                        class="primary-button"
+                    >
+                        ＋ Yeni Kişi
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- MESAJLAR -->
+
+            <section
+                id="messages"
+                class="messages hidden"
+            ></section>
+
+
+
+            <!-- MESAJ ALANI -->
+
+            <div
+                id="messageArea"
+                class="message-area hidden"
+            >
+
+                <div class="message-input-wrapper">
+
+
+                    <button
+                        id="emojiButton"
+                        class="input-button"
+                        title="Emoji"
+                    >
+                        ☺
+                    </button>
+
+
+                    <textarea
+                        id="messageInput"
+                        rows="1"
+                        maxlength="5000"
+                        placeholder="Mesaj yaz..."
+                    ></textarea>
+
+
+                    <button
+                        id="sendButton"
+                        class="send-button"
+                        title="Gönder"
+                    >
+                        ↑
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================
+         YENİ KİŞİ MODALI
+    ====================================== -->
+
+    <div
+        id="modalOverlay"
+        class="modal-overlay"
+    >
+
+        <div class="modal">
+
+            <button
+                id="closeModal"
+                class="modal-close"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-icon">
+                ＋
+            </div>
+
+
+            <h2>
+                Yeni Kişi
+            </h2>
+
+
+            <p>
+                Sohbet listene yeni bir kişi ekle.
+            </p>
+
+
+            <input
+                id="personNameInput"
+                class="person-input"
+                type="text"
+                placeholder="Kişinin adı"
+                maxlength="40"
+                autocomplete="off"
+            >
+
+
+            <button
+                id="addPersonBtn"
+                class="modal-add"
+            >
+                Kişiyi Ekle
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         PROFİL MODALI
+    ====================================== -->
+
+    <div
+        id="profileOverlay"
+        class="modal-overlay"
+    >
+
+        <div class="modal profile-modal">
+
+
+            <button
+                id="closeProfile"
+                class="modal-close"
+            >
+                ×
+            </button>
+
+
+            <!-- FOTOĞRAF -->
+
+            <div class="profile-edit-avatar-wrapper">
+
+                <div
+                    id="profileEditAvatar"
+                    class="profile-edit-avatar"
+                >
+                    ?
+                </div>
+
+
+                <label
+                    for="profilePhotoInput"
+                    class="photo-edit-button"
+                    title="Fotoğraf değiştir"
+                >
+                    ✎
+                </label>
+
+
+                <input
+                    id="profilePhotoInput"
+                    type="file"
+                    accept="image/*"
+                    hidden
+                >
+
+            </div>
+
+
+            <h2>
+                Profilim
+            </h2>
+
+
+            <p>
+                Adını ve profil fotoğrafını düzenle.
+            </p>
+
+
+            <input
+                id="profileNameInput"
+                class="person-input"
+                type="text"
+                placeholder="Adın"
+                maxlength="40"
+                autocomplete="off"
+            >
+
+
+            <div class="profile-actions">
+
+                <button
+                    id="removePhotoBtn"
+                    class="secondary-modal-button"
+                >
+                    Fotoğrafı Kaldır
+                </button>
+
+
+                <button
+                    id="saveProfileBtn"
+                    class="modal-add"
+                >
+                    Kaydet
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TOAST -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+        <span id="toastText"></span>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
