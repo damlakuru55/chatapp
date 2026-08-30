@@ -1,39 +1,25 @@
-# Luma Chat
+# Chat App
 
-A modern real-time chat application with a clean Liquid Glass inspired interface.
+A simple browser-based chat application focused on creating an interactive messaging interface.
 
 ## Features
 
-- Real-time messaging
-- Online user list
-- Personal profile
-- Custom username
-- Profile picture
-- Message notifications
-- Message sound effects
-- Responsive design
-- iOS-inspired Liquid Glass interface
-- No fake users
-- No login screen
+* Send messages
+* Display conversations
+* Interactive chat interface
+* Responsive design
+* Clean layout
 
 ## Technologies
 
-- HTML5
-- CSS3
-- JavaScript
-- Node.js
-- Express
-- Socket.IO
+* HTML5
+* CSS3
+* JavaScript
 
-## Getting Started
+## Purpose
 
-### Requirements
+This project was created to practice event handling, dynamic content rendering, and chat interface design.
 
-Make sure you have Node.js installed on your computer.
+## License
 
-### Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/damlakuru55/chatapp.git
+This project is open source and available under the MIT License.
