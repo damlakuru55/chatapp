@@ -31,6 +31,10 @@ Message failures should preserve the user's entered text when possible and expla
 
 New messages should be appended in a consistent order so the conversation remains easy to follow. If automatic scrolling is used, users should still be able to review earlier messages.
 
+## Message Persistence
+
+If local persistence is added, the application should keep storage operations separate from rendering and recover safely when saved data is unavailable or malformed.
+
 ## Technologies
 
 - HTML
@@ -43,7 +47,7 @@ Clone the repository and open the project in a modern browser.
 
 ## Purpose
 
-This project was created to practice user interaction, DOM manipulation, dynamic message handling, validation, ordering, and responsive frontend development.
+This project was created to practice user interaction, DOM manipulation, dynamic message handling, validation, ordering, persistence planning, and responsive frontend development.
 
 ## License
 
