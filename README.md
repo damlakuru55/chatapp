@@ -10,6 +10,10 @@ A simple and modern chat application built with a clean and user-friendly interf
 * Clean and responsive design
 * Easy-to-use controls
 
+## Accessibility
+
+The interface should keep message controls keyboard-friendly, provide clear focus states, and use descriptive labels for interactive elements.
+
 ## Technologies
 
 * HTML
@@ -20,7 +24,7 @@ A simple and modern chat application built with a clean and user-friendly interf
 
 Clone the repository:
 
-```bash id="k7m3xp"
+```bash
 git clone https://github.com/damlakuru55/chatapp.git
 ```
 
@@ -35,7 +39,7 @@ Open the project folder and launch the application in your browser.
 
 ## Project Structure
 
-```text id="q8v4dn"
+```text
 chatapp/
 ├── index.html
 ├── style.css
