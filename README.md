@@ -57,3 +57,8 @@ This project is open source and available under the MIT License.
 ## Development Notes
 
 The interface keeps state changes explicit and predictable. User input should be validated before processing, successful actions should update visible state immediately, and invalid states should provide clear feedback.
+
+
+## Development Notes
+
+The chat interface keeps message rendering predictable and leaves the composer ready for the next message after a successful send.
