@@ -4,52 +4,33 @@ A simple and modern chat application built with a clean and user-friendly interf
 
 ## Features
 
-* Send and receive messages
-* Simple chat interface
-* Dynamic message display
-* Clean and responsive design
-* Easy-to-use controls
+- Send and receive messages
+- Dynamic message display
+- Clean and responsive design
+- Easy-to-use controls
+- Keyboard-friendly interaction
 
 ## Accessibility
 
 The interface should keep message controls keyboard-friendly, provide clear focus states, and use descriptive labels for interactive elements.
 
+## Message UX
+
+Messages should appear in a predictable order and the composer should provide immediate feedback when an empty message is submitted. Dynamic content should be rendered safely rather than treating user text as HTML.
+
 ## Technologies
 
-* HTML
-* CSS
-* JavaScript
+- HTML
+- CSS
+- JavaScript
 
 ## Getting Started
 
-Clone the repository:
-
-```bash
-git clone https://github.com/damlakuru55/chatapp.git
-```
-
-Open the project folder and launch the application in your browser.
-
-## Usage
-
-1. Open the application.
-2. Enter a message.
-3. Send the message.
-4. View messages in the chat interface.
-
-## Project Structure
-
-```text
-chatapp/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
+Clone the repository and open the project in a modern browser.
 
 ## Purpose
 
-This project was created as a JavaScript practice project focused on user interaction, DOM manipulation, and dynamic message handling.
+This project was created to practice user interaction, DOM manipulation, dynamic message handling, validation, and responsive frontend development.
 
 ## License
 
