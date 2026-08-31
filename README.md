@@ -64,3 +64,7 @@ Conversation ordering and composer state should remain synchronized after succes
 ## Final Review
 
 The documented message workflow preserves predictable ordering and clear recovery for future interface updates.
+
+## Maintenance Notes
+
+Keep conversation state, message rendering, and input handling separated so future chat features can be added without making the interface difficult to maintain.
