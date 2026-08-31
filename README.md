@@ -62,3 +62,7 @@ The interface keeps state changes explicit and predictable. User input should be
 ## Development Notes
 
 The chat interface keeps message rendering predictable and leaves the composer ready for the next message after a successful send.
+
+## Release Check
+
+Conversation ordering and composer state should remain synchronized after successful and failed message actions.
