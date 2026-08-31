@@ -27,6 +27,10 @@ The chat interface should distinguish between an empty conversation, an active c
 
 Message failures should preserve the user's entered text when possible and explain what happened. The send control should return to an actionable state after a failed operation.
 
+## Message Ordering
+
+New messages should be appended in a consistent order so the conversation remains easy to follow. If automatic scrolling is used, users should still be able to review earlier messages.
+
 ## Technologies
 
 - HTML
@@ -39,8 +43,8 @@ Clone the repository and open the project in a modern browser.
 
 ## Purpose
 
-This project was created to practice user interaction, DOM manipulation, dynamic message handling, validation, and responsive frontend development.
+This project was created to practice user interaction, DOM manipulation, dynamic message handling, validation, ordering, and responsive frontend development.
 
 ## License
 
-This project is open source and available for personal and educational use.
+This project is open source and available under the MIT License.
