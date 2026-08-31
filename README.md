@@ -18,6 +18,10 @@ The interface should keep message controls keyboard-friendly, provide clear focu
 
 Messages should appear in a predictable order and the composer should provide immediate feedback when an empty message is submitted. Dynamic content should be rendered safely rather than treating user text as HTML.
 
+## Conversation States
+
+The chat interface should distinguish between an empty conversation, an active conversation, and a message-send error. This makes the UI state explicit and gives users useful feedback when an action cannot be completed.
+
 ## Technologies
 
 - HTML
