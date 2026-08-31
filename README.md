@@ -9,6 +9,7 @@ A simple and modern chat application built with a clean and user-friendly interf
 - Clean and responsive design
 - Easy-to-use controls
 - Keyboard-friendly interaction
+- Clear conversation states
 
 ## Accessibility
 
@@ -21,6 +22,10 @@ Messages should appear in a predictable order and the composer should provide im
 ## Conversation States
 
 The chat interface should distinguish between an empty conversation, an active conversation, and a message-send error. This makes the UI state explicit and gives users useful feedback when an action cannot be completed.
+
+## Error Handling
+
+Message failures should preserve the user's entered text when possible and explain what happened. The send control should return to an actionable state after a failed operation.
 
 ## Technologies
 
