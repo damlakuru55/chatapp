@@ -11,10 +11,6 @@ const {
 } = require("socket.io");
 
 
-/* =========================
-   EXPRESS
-========================= */
-
 const app =
     express();
 
@@ -33,11 +29,6 @@ const io =
                 10e6
         }
     );
-
-
-/* =========================
-   DOSYALAR
-========================= */
 
 app.use(
     express.static(
@@ -63,9 +54,6 @@ app.get(
 );
 
 
-/* =========================
-   MESAJ VERİTABANI
-========================= */
 
 const databaseFile =
     path.join(
@@ -144,17 +132,12 @@ function saveMessages() {
 loadMessages();
 
 
-/* =========================
-   KULLANICILAR
-========================= */
 
 const users =
     new Map();
 
 
-/* =========================
-   SOHBET ID
-========================= */
+
 
 function createChatId(
     user1,
@@ -178,9 +161,6 @@ function createChatId(
 }
 
 
-/* =========================
-   MESAJI KAYDET
-========================= */
 
 function saveMessage(
     message
@@ -232,9 +212,6 @@ function saveMessage(
 }
 
 
-/* =========================
-   KULLANICININ CHAT GEÇMİŞİ
-========================= */
 
 function getUserHistory(
     username
@@ -300,9 +277,6 @@ function getUserHistory(
 }
 
 
-/* =========================
-   ONLINE KULLANICILAR
-========================= */
 
 function broadcastOnlineUsers() {
 
@@ -320,8 +294,6 @@ function broadcastOnlineUsers() {
 }
 
 
-/* =========================
-   SOCKET
 ========================= */
 
 io.on(
@@ -412,10 +384,6 @@ io.on(
         );
 
 
-        /* =====================
-           YENİ SOHBET
-        ===================== */
-
         socket.on(
             "start_chat",
             data => {
@@ -456,10 +424,6 @@ io.on(
             }
         );
 
-
-        /* =====================
-           MESAJ
-        ===================== */
 
         socket.on(
             "private_message",
@@ -527,9 +491,6 @@ io.on(
         );
 
 
-        /* =====================
-           TYPING
-        ===================== */
 
         socket.on(
             "typing",
@@ -572,10 +533,7 @@ io.on(
         );
 
 
-        /* =====================
-           STOP TYPING
-        ===================== */
-
+        
         socket.on(
             "stop_typing",
             data => {
@@ -616,10 +574,7 @@ io.on(
             }
         );
 
-
-        /* =====================
-           WEBRTC CALL OFFER
-        ===================== */
+/
 
         socket.on(
             "call_offer",
@@ -669,9 +624,7 @@ io.on(
         );
 
 
-        /* =====================
-           WEBRTC ANSWER
-        ===================== */
+        
 
         socket.on(
             "call_answer",
@@ -718,9 +671,6 @@ io.on(
         );
 
 
-        /* =====================
-           ICE
-        ===================== */
 
         socket.on(
             "ice_candidate",
@@ -766,9 +716,7 @@ io.on(
         );
 
 
-        /* =====================
-           CALL END
-        ===================== */
+       
 
         socket.on(
             "call_end",
@@ -810,9 +758,6 @@ io.on(
         );
 
 
-        /* =====================
-           CALL REJECTED
-        ===================== */
 
         socket.on(
             "call_rejected",
@@ -853,10 +798,6 @@ io.on(
             }
         );
 
-
-        /* =====================
-           DISCONNECT
-        ===================== */
 
         socket.on(
             "disconnect",
@@ -902,9 +843,6 @@ io.on(
 );
 
 
-/* =========================
-   SERVER
-========================= */
 
 const PORT =
     process.env.PORT ||
